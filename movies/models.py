@@ -40,7 +40,7 @@ class Genre(models.Model):
     """Жанры"""
     title = models.CharField("Название", max_length=100)
     description = models.TextField("Описание")
-    url = models.SlugField(160, unique=True)
+    url = models.SlugField(max_length=160, unique=True)
 
     def __str__(self):
         return self.title
@@ -95,16 +95,19 @@ class MovieShots(models.Model):
         verbose_name = "Кадр из фильма"
         verbose_name_plural = "Кадры из фильма"
 
+
 class RatingStar(models.Model):
     """Звезда рейтинга"""
     value = models.PositiveSmallIntegerField("Значение", default=0)
 
     def __str__(self):
-        return self.value
+        return f'{self.value}'
 
     class Meta:
         verbose_name = "Звезда рейтинга"
         verbose_name_plural = "Звезды рейтинга"
+        ordering = ["-value"]
+
 
 class Rating(models.Model):
     """Рейтинг"""
@@ -118,6 +121,7 @@ class Rating(models.Model):
     class Meta:
         verbose_name = "Рейтинг"
         verbose_name_plural = "Рейтинги"
+
 
 class Reviews(models.Model):
     """Отзывы"""
