@@ -6,24 +6,25 @@
                 <h2 class="logo-2 mb-lg-4 mb-3">
                     <a href="index.html" class="editContent">
                                 <span class="fa" aria-hidden="true">
-                                    Django School
+                                    Django
                                 </span>
                     </a>
                 </h2>
                 <p class="editContent">
-                    Канал для программистов и людей, которые хотят развиваться в сфере IT.
-                    Видео уроки по python 3, Django 2, Django 3, JavaScript, Vue.js, HTML, CSS
-                    и многое другое.
+                    Django — свободный фреймворк для веб-приложений на языке Python,
+                    использующий шаблон проектирования MVC. Проект поддерживается организацией
+                    Django Software Foundation. Сайт на Django строится из одного или нескольких
+                    приложений, которые рекомендуется делать отчуждаемыми и подключаемыми.
                 </p>
                 <h4 class="sub-con-fo ad-info my-4 editContent">Catch on Social</h4>
                 <ul class="w3layouts_social_list media-soc list-unstyled">
                     <li>
-                        <a href="#" class="w3pvt_facebook editContent">
+                        <a href="https://facebook.com/LeonardoDiCaprio" class="w3pvt_facebook editContent">
                             <span class="fa fa-facebook-f"></span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="w3pvt_twitter editContent">
+                        <a href="https://twitter.com/varlamov" class="w3pvt_twitter editContent">
                             <span class="fa fa-twitter"></span>
                         </a>
                     </li>
@@ -49,7 +50,7 @@
                             Разделы</h3>
                         <ul class="list-unstyled w3layouts-icons">
                             <li>
-                                <a href="index.html" class="editContent">Главная</a>
+                                <a href="{% url 'main' %}" class="editContent">Главная</a>
                             </li>
                             <li>
                                 <a href="about.html" class="editContent">Категории</a>
@@ -109,8 +110,8 @@
 <div class="cpy-right py-3">
     <div class="container">
         <div class="row">
-            <p class="col-md-10 text-left">© 2019 - 2020 DjangoMovie. All rights reserved | Design by
-                <a href="https://djangochannel.com"> DJANGO SCHOOL.</a>
+            <p class="col-md-10 text-left">
+                © 2020 DjangoMovie. All rights reserved
             </p>
             <!-- move top icon -->
             <a href="#home" class="move-top text-right col-md-2"><span

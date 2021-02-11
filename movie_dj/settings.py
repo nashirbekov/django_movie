@@ -47,6 +47,9 @@ INSTALLED_APPS = [
 
     'snowpenguin.django.recaptcha3',
 
+    'allauth',
+    'allauth.account',
+
 ]
 
 MIDDLEWARE = [
@@ -94,6 +97,10 @@ DATABASES = {
 }
 
 
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend'
+)
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -125,6 +132,13 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+
+ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
+ACCOUNT_USERNAME_MIN_LENGTH = 4
+LOGIN_REDIRECT_URL = '/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 
 
 # Static files (CSS, JavaScript, Images)
