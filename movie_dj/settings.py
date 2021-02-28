@@ -20,9 +20,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '293&lj#o_-zo=iv4er1optc20q8*ro__7y_t$w+7$*xb8sn8_g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['185.251.90.91']
 
 
 # Application definition
@@ -89,10 +89,10 @@ WSGI_APPLICATION = 'movie_dj.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'moviedb',
+        'NAME': 'nurbek',
         'USER': 'nurbek',
-        'PASSWORD': 'sdfsdf',
-        'HOST': 'localhost',
+        'PASSWORD': 'qwe123!@#',
+        'HOST': '185.251.90.91',
         'PORT': '5432',
     }
 }
